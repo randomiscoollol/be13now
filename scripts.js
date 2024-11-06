@@ -1,20 +1,23 @@
 // Utility functions to show/hide sections
 function showSignup() {
-    console.log("Showing Signup Form");
+    console.log("Switching to Sign Up form.");
+    // Show the signup form and hide the login form
     document.getElementById("signup-container").classList.remove("hidden");
     document.getElementById("login-container").classList.add("hidden");
     document.getElementById("countdown-container").classList.add("hidden");
 }
 
 function showLogin() {
-    console.log("Showing Login Form");
+    console.log("Switching to Login form.");
+    // Show the login form and hide the signup form
     document.getElementById("signup-container").classList.add("hidden");
     document.getElementById("login-container").classList.remove("hidden");
     document.getElementById("countdown-container").classList.add("hidden");
 }
 
 function showCountdown(username) {
-    console.log("Showing Countdown for user:", username);
+    console.log("User logged in: " + username);
+    // Show countdown container after login
     document.getElementById("signup-container").classList.add("hidden");
     document.getElementById("login-container").classList.add("hidden");
     document.getElementById("countdown-container").classList.remove("hidden");
@@ -31,10 +34,10 @@ function signUp() {
         if (!localStorage.getItem(username)) {
             const userData = {
                 password: password,
-                signupDate: new Date().getTime()
+                signupDate: new Date().getTime() // store the current time for countdown
             };
             localStorage.setItem(username, JSON.stringify(userData));
-            signupMessage.textContent = "Account created! Go to login.";
+            signupMessage.textContent = "Account created! You can now log in.";
         } else {
             signupMessage.textContent = "Username already taken.";
         }
