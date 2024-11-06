@@ -1,15 +1,20 @@
 // Utility functions to show/hide sections
 function showSignup() {
+    console.log("Showing Signup Form");
     document.getElementById("signup-container").classList.remove("hidden");
     document.getElementById("login-container").classList.add("hidden");
+    document.getElementById("countdown-container").classList.add("hidden");
 }
 
 function showLogin() {
+    console.log("Showing Login Form");
     document.getElementById("signup-container").classList.add("hidden");
     document.getElementById("login-container").classList.remove("hidden");
+    document.getElementById("countdown-container").classList.add("hidden");
 }
 
 function showCountdown(username) {
+    console.log("Showing Countdown for user:", username);
     document.getElementById("signup-container").classList.add("hidden");
     document.getElementById("login-container").classList.add("hidden");
     document.getElementById("countdown-container").classList.remove("hidden");
