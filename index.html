@@ -10,28 +10,32 @@
     <div class="container">
         <h1>CantUseMeTil13</h1>
 
+        <!-- Signup Form -->
         <div id="signup-container" class="auth-container">
             <h2>Sign Up</h2>
             <input type="text" id="signup-username" placeholder="Username" required>
             <input type="password" id="signup-password" placeholder="Password" required>
             <button onclick="signUp()">Sign Up</button>
+            <button onclick="showLogin()">Go to Login</button>
             <p id="signup-message"></p>
         </div>
 
+        <!-- Login Form -->
         <div id="login-container" class="auth-container hidden">
             <h2>Login</h2>
             <input type="text" id="login-username" placeholder="Username" required>
             <input type="password" id="login-password" placeholder="Password" required>
             <button onclick="login()">Login</button>
+            <button onclick="showSignup()">Go to Sign Up</button>
             <p id="login-message"></p>
         </div>
 
+        <!-- Countdown Display -->
         <div id="countdown-container" class="hidden">
             <h2>Welcome, <span id="username-display"></span>!</h2>
-            <p>To use this service, your account must be at least 13 years old.</p>
-            <div class="countdown" id="countdown"></div>
+            <p id="countdown"></p>
             <div id="game-container" class="hidden">
-                <p>Congratulations! Here's your reward:</p>
+                <p>Congratulations! Here’s your reward:</p>
                 <iframe src="https://scratch.mit.edu/projects/17828009/embed" allowtransparency="true" width="485" height="402" frameborder="0" scrolling="no"></iframe>
             </div>
         </div>
