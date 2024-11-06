@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CantUseMeTil13</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>CantUseMeTil13</h1>
+
+        <div id="signup-container" class="auth-container">
+            <h2>Sign Up</h2>
+            <input type="text" id="signup-username" placeholder="Username" required>
+            <input type="password" id="signup-password" placeholder="Password" required>
+            <button onclick="signUp()">Sign Up</button>
+            <p id="signup-message"></p>
+        </div>
+
+        <div id="login-container" class="auth-container hidden">
+            <h2>Login</h2>
+            <input type="text" id="login-username" placeholder="Username" required>
+            <input type="password" id="login-password" placeholder="Password" required>
+            <button onclick="login()">Login</button>
+            <p id="login-message"></p>
+        </div>
+
+        <div id="countdown-container" class="hidden">
+            <h2>Welcome, <span id="username-display"></span>!</h2>
+            <p>To use this service, your account must be at least 13 years old.</p>
+            <div class="countdown" id="countdown"></div>
+            <div id="game-container" class="hidden">
+                <p>Congratulations! Here's your reward:</p>
+                <iframe src="https://scratch.mit.edu/projects/17828009/embed" allowtransparency="true" width="485" height="402" frameborder="0" scrolling="no"></iframe>
+            </div>
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
