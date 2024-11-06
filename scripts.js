@@ -64,6 +64,12 @@ function login() {
 
 // Countdown Function
 function startCountdown(signupDate) {
+    // Ensure signupDate is a valid timestamp
+    if (isNaN(signupDate)) {
+        console.error("Invalid signup date.");
+        return;
+    }
+
     const targetDate = new Date(signupDate);
     targetDate.setFullYear(targetDate.getFullYear() + 13); // 13 years from signup
 
@@ -81,6 +87,7 @@ function startCountdown(signupDate) {
             const minutes = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
             const seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
 
+            // Display countdown properly
             document.getElementById("countdown").textContent = `Time Remaining: ${days}d ${hours}h ${minutes}m ${seconds}s`;
         }
     }, 1000);
